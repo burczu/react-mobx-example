@@ -1,22 +1,21 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
+import 'normalize.css/normalize.css';
+import 'styles/App.css';
 
 import React from 'react';
+import { observer } from 'mobx-react';
 
-let yeomanImage = require('../images/yeoman.png');
-
+@observer
 class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
+        <span>{this.props.store.decorated}</span>
+        <input defaultValue={this.props.store.value}
+               onChange={(event) => this.props.store.value = event.currentTarget.value}
+        />
       </div>
     );
   }
 }
-
-AppComponent.defaultProps = {
-};
 
 export default AppComponent;
