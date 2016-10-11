@@ -1,5 +1,5 @@
 # react-mobx-example
-React + MobX application for the blog post purpose
+React + MobX application for the blog post purpose. The blog post: [A short introduction to MobX](http://frontendinsights.com/short-introduction-to-mobx/).
 
 ## Usage
 
